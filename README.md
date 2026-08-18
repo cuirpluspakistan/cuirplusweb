@@ -57,7 +57,8 @@ site whenever you push a change to `main`.
 
 ## Editing content
 
-All copy lives directly in `index.html`, in the section marked with an HTML comment
-(`<!-- ============ SECTION NAME ============ -->`). Colors, fonts and spacing are all
-defined as CSS variables at the top of `styles.css` under `:root`, so a rebrand only
-touches a handful of lines.
+Page content is intentionally kept in clearly marked sections in `index.html`, while images are stored under `assets/`. The layout is still dependency-free and deploys directly to Cloudflare Pages.
+
+Temporary service images live in `assets/supply/` and can be replaced with final photography later without changing the layout. Partner logos have a dedicated section (`#partners`) so official Heusch and Alpe artwork can be dropped in when supplied.
+
+For the next CMS pass, these content areas can be moved into a Git-based CMS without changing the visual layer; Cloudflare Pages can then rebuild automatically whenever CMS content is committed.
